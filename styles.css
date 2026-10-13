@@ -317,3 +317,5 @@ summary{min-height:44px;align-items:center;padding:6px 0}
 .field-err{color:#b42318;font-size:.85rem;font-weight:500}
 .field [aria-invalid="true"]{border-color:#b42318;background:#fff}
 .logo i{margin-left:.28em}
+.hero h1{font-size:clamp(2.5rem,4.4vw,4.1rem)}
+.about.no-photo{grid-template-columns:1fr}.about.no-photo .promises{max-width:860px}
