@@ -14,3 +14,9 @@
     els.forEach(function(el){io.observe(el)});
   } else els.forEach(function(el){el.classList.add('in')});
 })();
+(function(){
+  var frames=document.querySelectorAll('.concept-frame');
+  function fit(){frames.forEach(function(f){var i=f.querySelector('iframe');if(i)i.style.transform='scale('+(f.clientWidth/1280)+')'})}
+  fit(); addEventListener('resize',fit);
+  if('ResizeObserver' in window){var ro=new ResizeObserver(fit);frames.forEach(function(f){ro.observe(f)})}
+})();

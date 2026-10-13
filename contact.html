@@ -24,6 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Crawford Web Design","url":"https://crawfordwebdesign.ca/","image":"https://crawfordwebdesign.ca/og-image.jpg","email":"crawfordwebdesign@outlook.com","address":{"@type":"PostalAddress","addressLocality":"Alliston","addressRegion":"ON","addressCountry":"CA"},"areaServed":[{"@type":"Place","name":"Alliston, Ontario"},{"@type":"Place","name":"New Tecumseth, Ontario"},{"@type":"AdministrativeArea","name":"Ontario"}],"description":"Website design, redesign and updates for small businesses in Ontario.","priceRange":"CAD $400+"}</script>
 </head>
@@ -109,8 +110,8 @@
         </div>
       </form>
       <div class="success" tabindex="-1" id="form-success">
-        <div class="tick" aria-hidden="true">✓</div>
-        <h2>Thanks, message sent!</h2>
+        <div class="tick" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+        <h2>Thanks, your message is on its way.</h2>
         <p>I'll get back to you by email soon. Keep an eye on your inbox (and your spam folder, just in case).</p>
         <a class="btn btn-line" href="/portfolio.html">See recent work</a>
       </div>
@@ -135,10 +136,19 @@ document.getElementById('quote-form').addEventListener('submit',async function(e
   e.preventDefault();
   const form=this, card=document.getElementById('form-card'), note=document.getElementById('form-note'), button=form.querySelector('button[type="submit"]');
   note.className='form-status'; note.textContent='';
+  form.querySelectorAll('.field-err').forEach(function(n){n.remove()});
+  form.querySelectorAll('[aria-invalid]').forEach(function(n){n.removeAttribute('aria-invalid');n.removeAttribute('aria-describedby')});
   if(!form.checkValidity()){
-    const bad=form.querySelector(':invalid'); note.className='form-status err';
-    note.textContent=bad&&bad.type==='email'&&bad.value?'Please enter a valid email address.':'Please fill in the required fields.';
-    bad&&bad.focus(); return;
+    let first=null;
+    form.querySelectorAll('input,select,textarea').forEach(function(el){
+      if(el.name==='_honey'||el.checkValidity()) return;
+      const msg=document.createElement('span'); msg.className='field-err'; msg.id=el.id+'-err';
+      msg.textContent=el.validity.valueMissing?'This field is required.':(el.type==='email'?'Please enter a valid email address, like name@example.com.':'Please check this field.');
+      el.setAttribute('aria-invalid','true'); el.setAttribute('aria-describedby',msg.id); el.after(msg);
+      if(!first) first=el;
+    });
+    note.className='form-status err'; note.textContent='Please fix the highlighted fields.';
+    first&&first.focus(); return;
   }
   const data=Object.fromEntries(new FormData(form).entries());
   if(data._honey) return;

@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Little Loaf Bakehouse | Concept site by Crawford Web Design</title>
+<meta name="description" content="A concept website for a fictional neighbourhood bakery, designed by Crawford Web Design in Alliston, Ontario.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://crawfordwebdesign.ca/concepts/little-loaf/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23c8442f'/%3E%3Ctext x='32' y='43' font-family='Georgia' font-size='30' fill='%23fbf3e6' text-anchor='middle'%3ELL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fbf3e6;--cream-2:#f3e4cc;--cocoa:#3b2418;--cocoa-2:#6b4a38;--tomato:#b53a26;--butter:#f2b84b;--line:#e3cfae}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--cocoa);font:17px/1.6 Inter,system-ui,sans-serif}
+a{color:inherit}img,svg{display:block;max-width:100%}
+.wrap{width:min(1160px,calc(100% - 40px));margin-inline:auto}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:700;letter-spacing:-.02em;line-height:1.02;margin:0}
+.concept{background:var(--cocoa);color:var(--cream);font-size:.85rem;text-align:center;padding:9px 16px}
+.concept a{color:var(--butter);font-weight:600;display:inline-block;padding:12px 0;margin:-12px 0}
+header{padding:22px 0}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .mark{width:46px;height:46px;border-radius:50%;background:var(--tomato);color:var(--cream);display:grid;place-items:center;font:700 1.1rem Fraunces,serif}
+.brand b{font:700 1.3rem/1 Fraunces,serif}.brand small{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cocoa-2);margin-top:4px}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-weight:500}
+.nav ul a{text-decoration:none}.nav ul a:hover{color:var(--tomato)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:var(--tomato);color:var(--cream)}
+.btn-line{border:2px solid var(--cocoa)}
+
+.hero{padding:40px 0 90px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero .kicker{display:inline-block;background:var(--butter);padding:6px 14px;border-radius:99px;font-weight:600;font-size:.85rem;rotate:-2deg}
+.hero h1{font-size:clamp(3rem,7.5vw,6.4rem);margin:22px 0 22px}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--tomato)}
+.hero p{font-size:1.2rem;color:var(--cocoa-2);max-width:40ch;margin:0 0 30px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.open-now{margin-top:28px;display:flex;align-items:center;gap:10px;font-size:.95rem;color:var(--cocoa-2)}
+.open-now i{width:10px;height:10px;border-radius:50%;background:#3f9b4f;box-shadow:0 0 0 5px #3f9b4f22}
+.art{position:relative;aspect-ratio:1;max-width:520px;margin-left:auto;width:100%}
+.art .sun{position:absolute;inset:6%;border-radius:50%;background:var(--butter)}
+.art svg{position:absolute;inset:0;width:100%;height:100%}
+.sticker{position:absolute;right:2%;top:6%;width:120px;height:120px;border-radius:50%;background:var(--tomato);color:var(--cream);display:grid;place-items:center;text-align:center;font:600 .82rem/1.2 Inter;rotate:12deg;padding:14px}
+.sticker b{display:block;font:700 1.6rem/1 Fraunces,serif}
+
+.strip{background:var(--tomato);color:var(--cream);overflow:hidden;white-space:nowrap;padding:16px 0;font:500 1.35rem Fraunces,serif;font-style:italic}
+.strip span{display:inline-block;animation:slide 30s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+section{padding:100px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:46px}
+.head h2{font-size:clamp(2.4rem,5vw,4rem)}
+.head h2 em{font-style:italic;font-weight:500;color:var(--tomato)}
+.head p{max-width:40ch;color:var(--cocoa-2);margin:0}
+.menu{display:grid;grid-template-columns:repeat(2,1fr);gap:0 60px}
+.item{display:grid;grid-template-columns:1fr auto;gap:6px 20px;padding:22px 0;border-bottom:1.5px dashed var(--line)}
+.item h3{font-size:1.35rem}
+.item .price{font:700 1.25rem Fraunces,serif;color:var(--tomato)}
+.item p{grid-column:1/-1;margin:0;color:var(--cocoa-2);font-size:.95rem}
+.tag{display:inline-block;margin-left:8px;font:600 .68rem/1 Inter;letter-spacing:.1em;text-transform:uppercase;background:var(--cream-2);padding:5px 8px;border-radius:99px;vertical-align:middle;color:var(--cocoa)}
+
+.order{background:var(--cocoa);color:var(--cream);border-radius:32px;padding:70px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.order h2{font-size:clamp(2.2rem,4.5vw,3.6rem)}
+.order h2 em{color:var(--butter);font-style:italic;font-weight:500}
+.order p{color:#e8d6bf;max-width:44ch}
+.steps{display:grid;gap:14px}
+.steps div{background:#4a2f21;border-radius:18px;padding:18px 22px;display:flex;gap:16px;align-items:center}
+.steps b{font:700 1.8rem/1 Fraunces,serif;color:var(--butter);min-width:30px}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about h2{font-size:clamp(2.2rem,4.5vw,3.6rem);margin-bottom:22px}
+.about p{color:var(--cocoa-2);font-size:1.08rem}
+.badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.badges span{border:1.5px solid var(--cocoa);border-radius:99px;padding:8px 14px;font-size:.88rem;font-weight:500}
+.quote{background:var(--cream-2);border-radius:28px;padding:44px;position:relative}
+.quote p{font:500 1.6rem/1.35 Fraunces,serif;font-style:italic;color:var(--cocoa);margin:0 0 18px}
+.quote small{color:var(--cocoa-2)}
+.quote .note{position:absolute;top:-14px;left:30px;background:var(--butter);font-size:.75rem;font-weight:600;padding:5px 10px;border-radius:99px}
+
+.visit{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.card{background:#fff;border:1.5px solid var(--line);border-radius:24px;padding:30px}
+.card h3{font-size:1.4rem;margin-bottom:14px}
+.hours{list-style:none;margin:0;padding:0;font-size:.95rem}
+.hours li{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--cream-2)}
+.hours li.today{font-weight:600;color:var(--tomato)}
+.map{background:repeating-linear-gradient(45deg,var(--cream-2) 0 12px,#efdcc0 12px 24px);border-radius:16px;height:140px;display:grid;place-items:center;margin-top:12px;font-weight:600}
+footer{padding:50px 0;border-top:1.5px solid var(--line);margin-top:60px;font-size:.9rem;color:var(--cocoa-2)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+@media (max-width:900px){
+  .hero-grid,.order,.about,.visit{grid-template-columns:1fr}
+  .art{max-width:380px;margin:0 auto}
+  .menu{grid-template-columns:1fr}
+  .order{padding:40px 26px;border-radius:24px}
+  .nav{flex-wrap:wrap}
+  .nav nav{order:3;width:100%}
+  .nav ul{overflow-x:auto;gap:8px;padding-bottom:4px;scrollbar-width:none}
+  .nav ul a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1.5px solid var(--line);border-radius:99px;white-space:nowrap;background:#fff}
+  section{padding:70px 0}
+}
+@media (max-width:480px){.nav > .btn{display:none}.sticker{width:96px;height:96px;font-size:.7rem}.sticker b{font-size:1.3rem}.nav .btn{padding:11px 16px;font-size:.9rem}}
+@media (prefers-reduced-motion:reduce){.strip span{animation:none}}
+</style>
+</head>
+<body>
+<div class="concept">Concept site · Little Loaf Bakehouse is a fictional business · Designed by <a href="/" target="_top">Crawford Web Design</a></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#"><span class="mark">LL</span><span><b>Little Loaf</b><small>Bakehouse · Alliston</small></span></a>
+    <nav aria-label="Main"><ul><li><a href="#menu">Today's bakes</a></li><li><a href="#order">Order ahead</a></li><li><a href="#about">Our story</a></li><li><a href="#visit">Visit</a></li></ul></nav>
+    <a class="btn btn-red" href="#order">Order ahead</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-top:30px">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">Fresh from the oven at 7am</span>
+        <h1>Bread worth getting up <em>early</em> for.</h1>
+        <p>Small-batch sourdough, flaky croissants and good coffee, baked every morning in downtown Alliston.</p>
+        <div class="actions">
+          <a class="btn btn-red" href="#menu">See today's bakes →</a>
+          <a class="btn btn-line" href="#visit">Hours &amp; location</a>
+        </div>
+        <div class="open-now"><i></i>Open today until 3pm</div>
+      </div>
+      <div class="art" aria-hidden="true">
+        <div class="sun"></div>
+        <svg viewBox="0 0 500 500">
+          <!-- loaf -->
+          <ellipse cx="250" cy="372" rx="180" ry="22" fill="#3b2418" opacity=".15"/>
+          <path d="M80 330c0-95 75-160 170-160s170 65 170 160c0 25-20 42-45 42H125c-25 0-45-17-45-42z" fill="#d98a3a"/>
+          <path d="M80 330c0-95 75-160 170-160s170 65 170 160c0 25-20 42-45 42H125c-25 0-45-17-45-42z" fill="none" stroke="#3b2418" stroke-width="6"/>
+          <path d="M150 250c25 10 40 30 45 55M230 215c25 15 40 40 42 70M310 230c22 15 33 38 34 62" fill="none" stroke="#fbf3e6" stroke-width="10" stroke-linecap="round"/>
+          <!-- steam -->
+          <path d="M210 150c-12-18 12-28 0-48M250 140c-12-18 12-28 0-48M290 150c-12-18 12-28 0-48" fill="none" stroke="#3b2418" stroke-width="5" stroke-linecap="round" opacity=".55"/>
+        </svg>
+        <div class="sticker"><span><b>Daily</b>baked fresh every morning</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip" aria-hidden="true"><span>Sourdough · Cinnamon buns · Butter croissants · Seasonal galettes · Rye · Baguettes · Oat cookies · Sourdough · Cinnamon buns · Butter croissants · Seasonal galettes · Rye · Baguettes · Oat cookies ·&nbsp;</span></div>
+
+  <section id="menu">
+    <div class="wrap">
+      <div class="head">
+        <h2>Today's <em>bakes</em></h2>
+        <p>Baked fresh every morning in small batches. When it's gone, it's gone, so order ahead to save yours.</p>
+      </div>
+      <div class="menu">
+        <div class="item"><h3>Country sourdough<span class="tag">Bestseller</span></h3><span class="price">$9</span><p>48-hour ferment, crackly crust, open crumb.</p></div>
+        <div class="item"><h3>Butter croissant</h3><span class="price">$4</span><p>Laminated by hand with real butter. Flaky, golden, messy in the best way.</p></div>
+        <div class="item"><h3>Cinnamon bun</h3><span class="price">$5</span><p>Brown-sugar swirl with a cream cheese glaze.</p></div>
+        <div class="item"><h3>Seasonal fruit galette<span class="tag">Fall</span></h3><span class="price">$6</span><p>Local apples, maple and a rustic all-butter crust.</p></div>
+        <div class="item"><h3>Seeded rye</h3><span class="price">$10</span><p>Dense, hearty and perfect for sandwiches.</p></div>
+        <div class="item"><h3>Drip coffee &amp; lattes</h3><span class="price">$3+</span><p>Roasted in Ontario. Oat milk available.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="order" style="padding-top:0">
+    <div class="wrap">
+      <div class="order">
+        <div>
+          <h2>Order ahead, <em>skip the line.</em></h2>
+          <p>Reserve loaves and pastries for pickup the next morning. Perfect for weekend brunch, office treats and family dinners.</p>
+          <a class="btn btn-red" href="#order" style="margin-top:12px">Start an order →</a>
+        </div>
+        <div class="steps">
+          <div><b>1</b>Choose your bakes online</div>
+          <div><b>2</b>Pick a pickup time</div>
+          <div><b>3</b>Grab it warm from the counter</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="padding-top:20px">
+    <div class="wrap about">
+      <div>
+        <h2>A small bakery with a big oven.</h2>
+        <p>Little Loaf started with one sourdough starter and a lot of early mornings. Today we bake bread, pastries and treats for the neighbourhood using local flour and simple ingredients.</p>
+        <p>Pull up a chair, grab a coffee, and stay a while.</p>
+        <div class="badges"><span>Local Ontario flour</span><span>Baked daily</span><span>Vegan options</span></div>
+      </div>
+      <div class="quote">
+        <span class="note">Sample review</span>
+        <p>"The sourdough is the best I've had outside of Toronto. We stop in every Saturday."</p>
+        <small>Placeholder review for this concept</small>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" style="padding-top:20px">
+    <div class="wrap">
+      <div class="head"><h2>Come <em>visit.</em></h2></div>
+      <div class="visit">
+        <div class="card">
+          <h3>Hours</h3>
+          <ul class="hours">
+            <li><span>Mon</span><span>Closed</span></li>
+            <li><span>Tue – Fri</span><span>7am – 3pm</span></li>
+            <li class="today"><span>Saturday</span><span>7am – 2pm</span></li>
+            <li><span>Sunday</span><span>8am – 1pm</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Find us</h3>
+          <p style="margin:0">123 Main Street<br>Alliston, Ontario</p>
+          <div class="map">Map goes here</div>
+        </div>
+        <div class="card">
+          <h3>Say hello</h3>
+          <p style="margin:0 0 18px">(705) 555-0142<br>hello@littleloaf.example</p>
+          <a class="btn btn-red" href="#order">Order ahead</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Little Loaf Bakehouse · a fictional bakery</span>
+    <span>Concept design by <a href="/" target="_top">Crawford Web Design</a></span>
+  </div>
+</footer>
+</body>
+</html>
