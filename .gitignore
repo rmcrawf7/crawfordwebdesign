@@ -1,0 +1,5 @@
+# Keep private work files out of the public website
+Claude outputs/
+*.xlsx
+*.docx
+*.csv
